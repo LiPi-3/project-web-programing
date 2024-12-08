@@ -113,8 +113,8 @@ $games = [
   <script>
     function filterGame(e) {
       console.log(e.id);
-      if (e.id == "All") $('.filter-item').removeClass('d-none');
-      else $('a.filter-item:not(.' + e.id + ')').addClass('d-none');
+      $('.filter-item').removeClass('d-none')
+      if (e.id != "All") $('a.filter-item:not(.' + e.id + ')').addClass('d-none');
       $('#GameFilter button').removeClass('active');
       e.classList.add('active')
     }
