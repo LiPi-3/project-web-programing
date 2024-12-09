@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Gamestore Indonesia</title>
+  <title>Lawak Store</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
@@ -56,18 +56,16 @@
       <h2 class="h5">Pilih Nominal Top Up</h2>
       <div class="row g-3">
         <div class="col-md-4">
-          <input type="radio" class="btn-check" name="options-outlined" id="#" autocomplete="off">
-          <label class="btn btn-outline-primary" for="btn btn-check-outlined"></label>
-          <input type="radio" class="btn-check" name="options-outlined" id="#" autocomplete="off">
-
-
-          <button class="btn btn-outline-primary w-100">60 Monochrome - Rp5,000</button>
+        <input type="radio" class="btn-check" name="options" id="option1" autocomplete="off" checked>
+        <label class="btn btn-outline-primary w-100 h-100" for="option1">Checked</label>
         </div>
         <div class="col-md-4">
-          <button class="btn btn-outline-primary w-100">300 + 30 Monochrome - Rp25,000</button>
+        <input type="radio" class="btn-check" name="options" id="option2" autocomplete="off">
+        <label class="btn btn-outline-primary w-100 h-100" for="option2">Radio</label>
         </div>
         <div class="col-md-4">
-          <button class="btn btn-outline-primary w-100">980 + 110 Monochrome - Rp50,000</button>
+        <input type="radio" class="btn-check" name="options" id="option3" autocomplete="off">
+        <label class="btn btn-outline-primary w-100 h-100" for="option3">Disabled</label>
         </div>
         <!-- Tambahkan item sesuai kebutuhan -->
       </div>
