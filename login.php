@@ -55,7 +55,7 @@
                 </div>
                 <?php endif; ?> -->
                 <h1>Login</h1>
-                <p>Silahkan Login Untuk Membuat Todo List</p>
+                <p>Silahkan Login Untuk Membuat Akun</p>
               </div>
               <div class="mb-3">
                 <label for="email" class="form-label">Email address</label>
