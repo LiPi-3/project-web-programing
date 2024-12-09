@@ -80,7 +80,7 @@
           <input type="text" id="user_id" name="user_id" class="form-control" required>
         </div>
         <div class="col-md-6">
-          <label for="server" class="form-label">Nomer Whatsapp</label>
+          <label for="no-wa" class="form-label">Nomer Whatsapp</label>
           <input type="text" id="whatsapp" name="whatsapp" class="form-control" required>
       </form>
     </section>
