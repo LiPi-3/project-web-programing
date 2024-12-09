@@ -94,13 +94,16 @@
       <h2 class="h5">Pilih Metode Pembayaran</h2>
       <div class="row g-3">
         <div class="col-md-4">
-          <button class="btn btn-outline-primary w-100">Bank Transfer - BCA</button>
+        <input type="radio" class="btn-check" name="options" id="BCA" autocomplete="off" checked>
+        <label class="btn btn-outline-primary w-100 h-100" for="BCA">Bank Transfer - BCA</label>
         </div>
         <div class="col-md-4">
-          <button class="btn btn-outline-primary w-100">Bank Transfer - BRI</button>
+        <input type="radio" class="btn-check" name="options" id="BRI" autocomplete="off">
+        <label class="btn btn-outline-primary w-100 h-100" for="BRI">Bank Transfer - BRI</label>
         </div>
         <div class="col-md-4">
-          <button class="btn btn-outline-primary w-100">QRIS</button>
+        <input type="radio" class="btn-check" name="options" id="QRIS" autocomplete="off">
+        <label class="btn btn-outline-primary w-100 h-100" for="QRIS">QRIs</label>
         </div>
       </div>
     </section>
