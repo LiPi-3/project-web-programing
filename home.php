@@ -1,15 +1,15 @@
 <?php
 $games = [
-  ['PC', 'valorant card', 'Valorant', 'Riot Games', 'pesanan-valorant'],
-  ['PC', 'PB', 'Point Blank', 'Zepetto'],
-  ['PC', 'Arena', 'Arena Breakout: Infinite', 'TIMI Games'],
-  ['PC', 'fornite', 'Fortnite', 'Epic Games'],
-  ['PC', 'LOL', 'League Of Legend', 'Riot Games'],
-  ['Mobile', 'ML', 'Mobile Legends: Bang Bang', 'Moonton'],
-  ['Mobile', 'pubg', 'PlayerUnknown\'s Battlegrounds', 'Tencent'],
-  ['Mobile', 'HI', 'Honkai Impact 3rd', 'Hoyoverse'],
-  ['Mobile', 'genshin', 'Genshin Impact', 'Hoyoverse'],
-  ['Mobile', 'HSR', 'Honkai Star Rail', 'Hoyoverse'],
+  ['PC', 'valorant card', 'Valorant', 'Riot Games', 'pesanan-valorant', '#'],
+  ['PC', 'PB', 'Point Blank', 'Zepetto', '#'],
+  ['PC', 'Arena', 'Arena Breakout: Infinite', 'TIMI Games', '#'],
+  ['PC', 'fornite', 'Fortnite', 'Epic Games', '#'],
+  ['PC', 'LOL', 'League Of Legend', 'Riot Games', '#'],
+  ['Mobile', 'ML', 'Mobile Legends: Bang Bang', 'Moonton', '#'],
+  ['Mobile', 'pubg', 'PlayerUnknown\'s Battlegrounds', 'Tencent', '#'],
+  ['Mobile', 'HI', 'Honkai Impact 3rd', 'Hoyoverse', '#'],
+  ['Mobile', 'genshin', 'Genshin Impact', 'Hoyoverse', '#'],
+  ['Mobile', 'HSR', 'Honkai Star Rail', 'Hoyoverse', '#'],
 ]
 ?>
 <!DOCTYPE html>
@@ -87,9 +87,9 @@ $games = [
 
           <?php foreach ($games as $i) { ?>
             <a href="<?= $i[4] ?>.php" class="btn col filter-item <?= $i[0] ?>">
-              <div class="card d-flex">
+              <div class="card d-flex h-100 align-items-stretch">
                 <img src="<?= $i[1] ?>.jpg" class="card-img-top" style="object-fit: cover; aspect-ratio: 9 / 16;" alt="...">
-                <div class="card-body align-items-stretch">
+                <div class="card-body">
                   <h5 class="card-title"><?= $i[2] ?></h5>
                   <p class="card-text"><?= $i[3] ?></p>
                 </div>
