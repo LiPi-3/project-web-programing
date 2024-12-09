@@ -1,6 +1,6 @@
 <?php
 $games = [
-  ['PC', 'valorant card', 'Valorant', 'Riot Games'],
+  ['PC', 'valorant card', 'Valorant', 'Riot Games', 'pesanan-valorant'],
   ['PC', 'PB', 'Point Blank', 'Zepetto'],
   ['PC', 'Arena', 'Arena Breakout: Infinite', 'TIMI Games'],
   ['PC', 'fornite', 'Fortnite', 'Epic Games'],
@@ -48,17 +48,16 @@ $games = [
         </button>
         <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
           <div class="navbar-nav">
-            <a class="nav-link active" aria-current="page" href="home.html">
+            <a class="nav-link active" aria-current="page" href="home.php">
               Beranda
             </a>
-            <a class="nav-link" href="pricelist.html">Pricelist</a>
             <a
               class="nav-link disabled"
               href="#"
               tabindex="-1"
               aria-disabled="true"></a>
             <div class="Login-link">
-              <a class="nav-link" href="#">Daftar/Masuk</a>
+              <a class="nav-link" href="registrasi.php">Daftar/Masuk</a>
             </div>
           </div>
         </div>
@@ -87,7 +86,7 @@ $games = [
         <div class="row row-cols-1 row-cols-md-5 g-4">
 
           <?php foreach ($games as $i) { ?>
-            <a href="#" class="btn col filter-item <?= $i[0] ?>">
+            <a href="<?= $i[4] ?>.php" class="btn col filter-item <?= $i[0] ?>">
               <div class="card d-flex">
                 <img src="<?= $i[1] ?>.jpg" class="card-img-top" style="object-fit: cover; aspect-ratio: 9 / 16;" alt="...">
                 <div class="card-body align-items-stretch">

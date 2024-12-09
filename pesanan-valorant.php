@@ -11,7 +11,7 @@
   <header>
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
         <div class="container-fluid">
-          <a class="navbar-brand" href="home.html">Lawak Store</a>
+          <a class="navbar-brand" href="home.php">Lawak Store</a>
           <button
             class="navbar-toggler"
             type="button"
@@ -26,10 +26,8 @@
           </button>
           <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
             <div class="navbar-nav">
-              <a class="nav-link active" aria-current="page" href="home.html"
-                >Beranda</a
-              >
-              <a class="nav-link" href="pricelist.html">Pricelist</a>
+              <a class="nav-link active" aria-current="page" href="home.php"
+                >Beranda</a>
               <a
                 class="nav-link disabled"
                 href="#"
@@ -37,7 +35,7 @@
                 aria-disabled="true"
               ></a>
               <div class="Login-link">
-                <a class="nav-link" href="#">Daftar/Masuk</a>
+                <a class="nav-link" href="registrasi.php">Daftar/Masuk</a>
               </div>
             </div>
           </div>
@@ -49,7 +47,7 @@
     <!-- Banner -->
     <section class="banner bg-dark text-white text-center p-4 rounded">
       <h1 class="mb-2">Valorant</h1>
-      <p>Customer Service 24/7 | Official Distributor</p>
+      <p>Customer Service 24/7</p>
       <img src="valorant-header.jpg" class="img-fluid rounded" alt="Zenless Zone Zero">
     </section>
 
@@ -58,6 +56,11 @@
       <h2 class="h5">Pilih Nominal Top Up</h2>
       <div class="row g-3">
         <div class="col-md-4">
+          <input type="radio" class="btn-check" name="options-outlined" id="#" autocomplete="off">
+          <label class="btn btn-outline-primary" for="btn btn-check-outlined"></label>
+          <input type="radio" class="btn-check" name="options-outlined" id="#" autocomplete="off">
+
+
           <button class="btn btn-outline-primary w-100">60 Monochrome - Rp5,000</button>
         </div>
         <div class="col-md-4">
