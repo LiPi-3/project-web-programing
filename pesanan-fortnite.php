@@ -1,26 +1,9 @@
 <?php
 $produk = [
-  ['1', '54.600', '1', '1', '475 Points | Rp54.600'],
-  ['2', '109.200', '2', '2', '1000 Points | Rp109.200'],
-  ['3', '163.800', '3', '3', '1475 Points | Rp163.800'],
-  ['4', '218.300', '4', '4', '2050 Points | Rp218.300'],
-  ['5', '272.900', '5', '5', '2525 Points | Rp272.900'],
-  ['6', '327.500', '6', '6', '3050 Points | Rp327.500'],
-  ['7', '379.100', '7', '7', '3650 Points | Rp379.100'],
-  ['8', '433.700', '8', '8', '4125 Points | Rp433.700'],
-  ['9', '488.300', '9', '9', '4650 Points | Rp488.300'],
-  ['10', '544.800', '10', '10', '5350 Points | Rp544.800'],
-  ['11', '597.400', '11', '11', '5700 Points | Rp597.400'],
-  ['12', '599.400', '12', '12', '5825 Points | Rp599.400'],
-  ['13', '653.900', '13', '13', '6350 Points | Rp653.900'],
-  ['14', '758.200', '14', '14', '7300 Points | Rp758.200'],
-  ['15', '763.100', '15', '15', '7400 Points | Rp763.100'],
-  ['16', '923.900', '16', '16', '9000 Points | Rp923.900'],
-  ['17', '1.071.000', '17', '17', '11000 Points | Rp1.071.000'],
-  ['18', '1.125.600', '18', '18', '11475 Points | Rp1.125.600'],
-  ['19', '1.180.100', '19', '19', '12000 Points | Rp1.180.100'],
-  ['20', '1.289.300', '20', '20', '13050 Points | Rp1.289.300'],
-  ['21', '1.450.100', '21', '21', '14650 Points | Rp1.450.100'],
+  ['1', '396.652', '1', '1', '2800 V-Bucks | Rp396.652'],
+  ['2', '543.038', '2', '2', '5000 V-Bucks | Rp543.038'],
+  ['3', '1.299.878', '3', '3', '13500 V-Bucks | Rp1.299.878'],
+
   ]
 ?>
 
@@ -76,9 +59,9 @@ $produk = [
   <main class="container my-4">
     <!-- Banner -->
     <section class="banner bg-dark text-white text-center p-4 rounded">
-      <h1 class="mb-2">Valorant</h1>
+      <h1 class="mb-2">Fortnite</h1>
       <p>Customer Service 24/7</p>
-      <img src="valorant-header.jpg" class="img-fluid rounded" alt="Valorant">
+      <img src="fortnite-header.jpg" class="img-fluid rounded" alt="Fortnite">
     </section>
 
     <!-- Pilih Nominal Top Up -->
@@ -88,7 +71,7 @@ $produk = [
 
       <div class="row g-3">
       <?php foreach ($produk as $i) { ?>
-        <div class="col-md-3">
+        <div class="col-md-4">
         <input type="radio" class="btn-check" name="options" id="option<?= $i[0] ?>" value="<?= $i[1] ?>" autocomplete="off">
         <label class="btn btn-outline-primary w-100 h-100" name="pilihan<?= $i[2] ?>" for="option<?= $i[3] ?>"><?= $i[4] ?></label>
         </div>
@@ -100,9 +83,9 @@ $produk = [
     <!-- Form User ID -->
     <section class="my-4">
     <div class="row g-3">
-      <h2 class="h5">Masukkan Riot ID</h2>
+      <h2 class="h5">Masukkan Player ID</h2>
         <div class="col-md-6">
-          <label for="user_id" class="form-label">Riot ID</label>
+          <label for="user_id" class="form-label">Masukan Player ID</label>
           <input type="text" id="user_id" name="user_id" class="form-control" required>
         </div>
 
@@ -110,16 +93,7 @@ $produk = [
           <label for="whatsapp" class="form-label">Nomer Whatsapp</label>
           <input type="text" onkeypress="return restrictAlphabets(event)" id="whatsapp" name="whatsapp" class="form-control" required>
         </div>
-        <!--
-        <div class="col-md-4">
-          <label for="server" class="form-label">Silakan Pilih Server</label>
-          <select class="form-select" id="server" aria-label="Default select example">
-          <option value="sea">SEA</option>
-          <option value="global">GLOBAL</option>
-          <option value="cn">CN</option>
-          </select>
-        </div>
-        -->
+
     </section>
 
     <!-- Metode Pembayaran -->

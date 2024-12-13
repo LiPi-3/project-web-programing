@@ -1,11 +1,11 @@
 <?php
 $games = [
-  ['PC', 'valorant card', 'Valorant', 'Riot Games', 'pesanan-valorant', '#'],
-  ['PC', 'PB', 'Point Blank', 'Zepetto', '#'],
-  ['PC', 'Arena', 'Arena Breakout: Infinite', 'TIMI Games', '#'],
-  ['PC', 'fornite', 'Fortnite', 'Epic Games', '#'],
-  ['PC', 'LOL', 'League Of Legend', 'Riot Games', '#'],
-  ['Mobile', 'ML', 'Mobile Legends: Bang Bang', 'Moonton', '#'],
+  ['PC', 'valorant card', 'Valorant', 'Riot Games', 'pesanan-valorant'],
+  ['PC', 'PB', 'Point Blank', 'Zepetto', 'pesanan-point-blank'],
+  ['PC', 'Arena', 'Arena Breakout: Infinite', 'TIMI Games', 'pesanan-ABI'],
+  ['PC', 'fornite', 'Fortnite', 'Epic Games', 'pesanan-fortnite'],
+  ['PC', 'LOL', 'League Of Legend', 'Riot Games', 'pesanan-lol'],
+  ['Mobile', 'ML', 'Mobile Legends: Bang Bang', 'Moonton', 'pesanan-ML'],
   ['Mobile', 'pubg', 'PlayerUnknown\'s Battlegrounds', 'Tencent', '#'],
   ['Mobile', 'HI', 'Honkai Impact 3rd', 'Hoyoverse', '#'],
   ['Mobile', 'genshin', 'Genshin Impact', 'Hoyoverse', '#'],
@@ -30,7 +30,7 @@ $games = [
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="home.html">Lawak Store</a>
+        <a class="navbar-brand" href="home.php">Lawak Store</a>
         <button
           class="navbar-toggler"
           type="button"
@@ -47,11 +47,6 @@ $games = [
             <a class="nav-link active" aria-current="page" href="home.php">
               Beranda
             </a>
-            <a
-              class="nav-link disabled"
-              href="#"
-              tabindex="-1"
-              aria-disabled="true"></a>
             <div class="Login-link">
               <a class="nav-link" href="registrasi.php">Daftar/Masuk</a>
             </div>
@@ -62,12 +57,9 @@ $games = [
     <!-- filter menu-->
     <nav class="navbar navbar-dark">
       <div class="container-fluid justify-content-center" id="GameFilter">
-        <button class="btn active" id="All" onclick="filterGame(this)">
-          All Games
-        </button>
-        <button class="btn" id="PC" onclick="filterGame(this)">PC Games</button>
-        <button class="btn" id="Mobile" onclick="filterGame(this)">
-          Mobile Games
+        <button type="button" class="btn btn-outline-primary" id="All" onclick="filterGame(this)">All Games</button>
+        <button type="button" class="btn btn-outline-primary" id="PC" onclick="filterGame(this)">PC Games</button>
+        <button type="button" class="btn btn-outline-primary" id="Mobile" onclick="filterGame(this)">Mobile Games
         </button>
       </div>
     </nav>
@@ -98,7 +90,11 @@ $games = [
     </section>
   </main>
 
-  <footer>allo</footer>
+  <footer class="bg-primary text-center text-lg-start">
+        <div class="text-center p-3 text-light">
+        © 2024 Copyright Lawak Store
+        </div>
+  </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 

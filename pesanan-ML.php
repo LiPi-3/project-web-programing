@@ -1,26 +1,25 @@
 <?php
 $produk = [
-  ['1', '54.600', '1', '1', '475 Points | Rp54.600'],
-  ['2', '109.200', '2', '2', '1000 Points | Rp109.200'],
-  ['3', '163.800', '3', '3', '1475 Points | Rp163.800'],
-  ['4', '218.300', '4', '4', '2050 Points | Rp218.300'],
-  ['5', '272.900', '5', '5', '2525 Points | Rp272.900'],
-  ['6', '327.500', '6', '6', '3050 Points | Rp327.500'],
-  ['7', '379.100', '7', '7', '3650 Points | Rp379.100'],
-  ['8', '433.700', '8', '8', '4125 Points | Rp433.700'],
-  ['9', '488.300', '9', '9', '4650 Points | Rp488.300'],
-  ['10', '544.800', '10', '10', '5350 Points | Rp544.800'],
-  ['11', '597.400', '11', '11', '5700 Points | Rp597.400'],
-  ['12', '599.400', '12', '12', '5825 Points | Rp599.400'],
-  ['13', '653.900', '13', '13', '6350 Points | Rp653.900'],
-  ['14', '758.200', '14', '14', '7300 Points | Rp758.200'],
-  ['15', '763.100', '15', '15', '7400 Points | Rp763.100'],
-  ['16', '923.900', '16', '16', '9000 Points | Rp923.900'],
-  ['17', '1.071.000', '17', '17', '11000 Points | Rp1.071.000'],
-  ['18', '1.125.600', '18', '18', '11475 Points | Rp1.125.600'],
-  ['19', '1.180.100', '19', '19', '12000 Points | Rp1.180.100'],
-  ['20', '1.289.300', '20', '20', '13050 Points | Rp1.289.300'],
-  ['21', '1.450.100', '21', '21', '14650 Points | Rp1.450.100'],
+  ['1', '1.500', '1', '1', '5 Diamonds (5+0 Bonus) | Rp1.500', 'diamond'],
+  ['2', '3.500', '2', '2', '12 Diamonds (11+1 Bonus) | Rp3.500', 'diamond'],
+  ['3', '5.500', '3', '3', '19 Diamonds (17+2 Bonus) | Rp5.500', 'diamond'],
+  ['4', '8.000', '4', '4', '28 Diamonds (25+3 Bonus) | Rp8.000', 'diamond'],
+  ['5', '11.900', '5', '5', '44 Diamonds (40+4 Bonus) | Rp11.900', 'diamond'],
+  ['6', '15.900', '6', '6', '59 Diamonds (53+6 Bonus) | Rp15.900', 'diamond'],
+  ['7', '22.800', '7', '7', '85 Diamonds (77+8 Bonus) | Rp22.800', 'diamond'],
+  ['8', '45.600', '8', '8', '170 Diamonds (154+16 Bonus) | Rp45.600', 'diamond'],
+  ['9', '64.600', '9', '9', '240 Diamonds (217+23 Bonus) | Rp64.600', 'diamond'],
+  ['10', '79.500', '10', '10', '296 Diamonds (256+40 Bonus) | Rp79.500', 'diamond'],
+  ['11', '108.800', '11', '11', '408 Diamonds (367+41 Bonus) | Rp108.800', 'diamond'],
+  ['12', '148.400', '12', '12', '568 Diamonds (503+65 Bonus) | Rp148.400', 'diamond'],
+  ['13', '227.500', '13', '13', '875 Diamonds (774+101 Bonus) | Rp227.500', 'diamond'],
+  ['14', '494.500', '14', '14', '2010 Diamonds (1708+302 Bonus) | Rp494.500', 'diamond'],
+  ['15', '1.186.500', '15', '15', '4830 Diamonds (4003+827 Bonus) | Rp1.186.500', 'diamond'],
+  ['16', '', '16', '16', ' weekly Diamond Pass (+ Bonus) | Rp', 'weekly'],
+  ['17', '', '17', '17', ' weekly Diamond Pass (+ Bonus) | Rp', 'weekly'],
+  ['18', '', '18', '18', ' weekly Diamond Pass (+ Bonus) | Rp', 'weekly'],
+  ['19', '', '19', '19', ' weekly Diamond Pass (+ Bonus) | Rp', 'weekly'],
+  ['2', '', '2', '2', ' weekly Diamond Pass (+ Bonus) | Rp', 'weekly'],
   ]
 ?>
 
@@ -36,6 +35,7 @@ $produk = [
     integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
     crossorigin="anonymous" />
   <link rel="stylesheet" href="styles.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
 </head>
 <body>
   <header>
@@ -76,33 +76,42 @@ $produk = [
   <main class="container my-4">
     <!-- Banner -->
     <section class="banner bg-dark text-white text-center p-4 rounded">
-      <h1 class="mb-2">Valorant</h1>
+      <h1 class="mb-2">Fortnite</h1>
       <p>Customer Service 24/7</p>
-      <img src="valorant-header.jpg" class="img-fluid rounded" alt="Valorant">
+      <img src="fortnite-header.jpg" class="img-fluid rounded" alt="MLBB">
     </section>
-
+    <br>
+    <section>
+    <h2 class="h5">Pilih Nominal Top Up</h2>
+        <div class="container-fluid justify-content-around" id="ItemFilter">
+        <button type="button" class="btn btn-outline-primary" id="diamond" onclick="filterProduk(this)">Diamonds</button>
+        <button type="button" class="btn btn-outline-primary" id="weekly" onclick="filterProduk(this)">Weakly Diamond Pass</button>
+        <button type="button" class="btn btn-outline-primary" id="twilight" onclick="filterProduk(this)">Twilight Pass</button>
+        </div>
+    </section>
+    <br>
     <!-- Pilih Nominal Top Up -->
     <form action="process.php" method="POST" class="row g-3">
     <section class="my-4">
-      <h2 class="h5">Pilih Nominal Top Up</h2>
 
       <div class="row g-3">
       <?php foreach ($produk as $i) { ?>
         <div class="col-md-3">
-        <input type="radio" class="btn-check" name="options" id="option<?= $i[0] ?>" value="<?= $i[1] ?>" autocomplete="off">
+        <input type="radio" class="btn-check filter-item <?= $i[5] ?>" name="options" id="option<?= $i[0] ?>" value="<?= $i[1] ?>" autocomplete="off">
         <label class="btn btn-outline-primary w-100 h-100" name="pilihan<?= $i[2] ?>" for="option<?= $i[3] ?>"><?= $i[4] ?></label>
         </div>
       <?php } ?>
         <!-- Tambahkan item sesuai kebutuhan -->
       </div>
+
     </section>
 
     <!-- Form User ID -->
     <section class="my-4">
     <div class="row g-3">
-      <h2 class="h5">Masukkan Riot ID</h2>
+      <h2 class="h5">Masukkan Player ID</h2>
         <div class="col-md-6">
-          <label for="user_id" class="form-label">Riot ID</label>
+          <label for="user_id" class="form-label">Masukan Player ID</label>
           <input type="text" id="user_id" name="user_id" class="form-control" required>
         </div>
 
@@ -110,16 +119,7 @@ $produk = [
           <label for="whatsapp" class="form-label">Nomer Whatsapp</label>
           <input type="text" onkeypress="return restrictAlphabets(event)" id="whatsapp" name="whatsapp" class="form-control" required>
         </div>
-        <!--
-        <div class="col-md-4">
-          <label for="server" class="form-label">Silakan Pilih Server</label>
-          <select class="form-select" id="server" aria-label="Default select example">
-          <option value="sea">SEA</option>
-          <option value="global">GLOBAL</option>
-          <option value="cn">CN</option>
-          </select>
-        </div>
-        -->
+
     </section>
 
     <!-- Metode Pembayaran -->
@@ -155,6 +155,15 @@ $produk = [
         © 2024 Copyright Lawak Store
         </div>
   </footer>
+  <script>
+    function filterProduk(e) {
+      console.log(e.id);
+      $('.filter-item').removeClass('d-none')
+      if (e.id != "All") $('a.filter-item:not(.' + e.id + ')').addClass('d-none');
+      $('#ItemFilter button').removeClass('active');
+      e.classList.add('active')
+    }
+  </script>
 
   <script type="text/javascript">
     function restrictAlphabets(e){
