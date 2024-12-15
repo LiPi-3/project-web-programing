@@ -85,7 +85,7 @@ $produk = [
     <div class="row g-3">
       <h2 class="h5">Masukkan Player ID</h2>
         <div class="col-md-6">
-          <label for="user_id" class="form-label">Masukan Player ID</label>
+          <label for="user_id" class="form-label">Masukkan Player ID</label>
           <input type="text" id="user_id" name="user_id" class="form-control" required>
         </div>
 
@@ -139,6 +139,6 @@ $produk = [
         return false;
     }
   </script>
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

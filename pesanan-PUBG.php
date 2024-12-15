@@ -1,26 +1,14 @@
 <?php
 $produk = [
-  ['1', '1.500', '5 Diamonds (5+0 Bonus) | Rp1.500', 'diamond'],
-  ['2', '3.500', '12 Diamonds (11+1 Bonus) | Rp3.500', 'diamond'],
-  ['3', '5.500', '19 Diamonds (17+2 Bonus) | Rp5.500', 'diamond'],
-  ['4', '8.000', '28 Diamonds (25+3 Bonus) | Rp8.000', 'diamond'],
-  ['5', '11.900', '44 Diamonds (40+4 Bonus) | Rp11.900', 'diamond'],
-  ['6', '15.900', '59 Diamonds (53+6 Bonus) | Rp15.900', 'diamond'],
-  ['7', '22.800', '85 Diamonds (77+8 Bonus) | Rp22.800', 'diamond'],
-  ['8', '45.600', '170 Diamonds (154+16 Bonus) | Rp45.600', 'diamond'],
-  ['9', '64.600', '240 Diamonds (217+23 Bonus) | Rp64.600', 'diamond'],
-  ['10', '79.500', '296 Diamonds (256+40 Bonus) | Rp79.500', 'diamond'],
-  ['11', '108.800', '408 Diamonds (367+41 Bonus) | Rp108.800', 'diamond'],
-  ['12', '148.400', '568 Diamonds (503+65 Bonus) | Rp148.400', 'diamond'],
-  ['13', '227.500', '875 Diamonds (774+101 Bonus) | Rp227.500', 'diamond'],
-  ['14', '494.500', '2010 Diamonds (1708+302 Bonus) | Rp494.500', 'diamond'],
-  ['15', '1.186.500', '4830 Diamonds (4003+827 Bonus) | Rp1.186.500', 'diamond'],
-  ['16', '27.700', ' weekly Diamond Pass | Rp27.700', 'weekly'],
-  ['17', '59.300', ' weekly Diamond Pass 2x | Rp59.300', 'weekly'],
-  ['18', '84.200', ' weekly Diamond Pass 3x | Rp84.200', 'weekly'],
-  ['19', '112.300', ' weekly Diamond Pass 4x | Rp112.300', 'weekly'],
-  ['20', '140.300', ' weekly Diamond Pass 5x | Rp140.300', 'weekly'],
-  ['21', '149.000', ' Twilight Pass | Rp149.000', 'twilight'],
+  ['1', '6.500', '30 UC | Rp6.500', 'UC'],
+  ['2', '12.900', '60 UC | Rp12.900', 'UC'],
+  ['3', '64.300', '300+25 UC | Rp64.300', 'UC'],
+  ['4', '128.500', '600+60 UC | Rp128.500', 'UC'],
+  ['5', '321.300', '1500+300 UC | Rp321.300', 'UC'],
+  ['6', '642.500', '3000+850 UC | Rp642.500', 'UC'],
+  ['7', '1.288.900', '6000+2100 UC | Rp1.288.900', 'UC'],
+  ['8', '144.000', 'Upgraded RP | Rp144.000', 'royale'],
+  ['9', '367.600', 'Upgraded Elite RP | Rp367.600', 'royale'],
 ]
 ?>
 
@@ -76,17 +64,16 @@ $produk = [
   <main class="container my-4">
     <!-- Banner -->
     <section class="banner bg-dark text-white text-center p-4 rounded">
-      <h1 class="mb-2">Mobile Legends: Bang Bang</h1>
+      <h1 class="mb-2">PUBG Mobile Indonesia</h1>
       <p>Customer Service 24/7</p>
-      <img src="ML-header.jpg" class="img-fluid rounded" alt="MLBB">
+      <img src="PUBG-header.jpg" class="img-fluid rounded" alt="PUBG ID">
     </section>
     <br>
     <section>
       <h2 class="h5">Pilih Nominal Top Up</h2>
       <div class="container-fluid justify-content-around" id="ItemFilter">
-        <button type="button" class="btn btn-outline-primary" id="diamond" onclick="filterProduk(this)">Diamonds</button>
-        <button type="button" class="btn btn-outline-primary" id="weekly" onclick="filterProduk(this)">Weekly Diamond Pass</button>
-        <button type="button" class="btn btn-outline-primary" id="twilight" onclick="filterProduk(this)">Twilight Pass</button>
+        <button type="button" class="btn btn-outline-primary" id="UC" onclick="filterProduk(this)">Unknown Cash</button>
+        <button type="button" class="btn btn-outline-primary" id="royale" onclick="filterProduk(this)">Rolaye Pass</button>
       </div>
     </section>
     <br>
@@ -110,15 +97,12 @@ $produk = [
       <section class="my-4">
         <div class="row g-3">
           <h2 class="h5">Masukkan User ID</h2>
-          <div class="col-md-4">
-            <label for="user_id" class="form-label">Masukkan User ID</label>
+          <div class="col-md-6">
+            <label for="user_id" class="form-label">Masukan User ID</label>
             <input type="text" id="user_id" name="user_id" class="form-control" required>
           </div>
-          <div class="col-md-4">
-          <label for="server_id" class="form-label">Masukkan Server</label>
-            <input type="text" id="server_id" name="server_id" class="form-control" required>
-          </div>
-          <div class="col-md-4">
+
+          <div class="col-md-6">
             <label for="whatsapp" class="form-label">Nomer Whatsapp</label>
             <input type="text" onkeypress="return restrictAlphabets(event)" id="whatsapp" name="whatsapp" class="form-control" required>
           </div>

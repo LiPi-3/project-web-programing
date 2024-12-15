@@ -6,10 +6,10 @@ $games = [
   ['PC', 'fornite', 'Fortnite', 'Epic Games', 'pesanan-fortnite'],
   ['PC', 'LOL', 'League Of Legend', 'Riot Games', 'pesanan-lol'],
   ['Mobile', 'ML', 'Mobile Legends: Bang Bang', 'Moonton', 'pesanan-ML'],
-  ['Mobile', 'pubg', 'PlayerUnknown\'s Battlegrounds', 'Tencent', '#'],
-  ['Mobile', 'HI', 'Honkai Impact 3rd', 'Hoyoverse', '#'],
-  ['Mobile', 'genshin', 'Genshin Impact', 'Hoyoverse', '#'],
-  ['Mobile', 'HSR', 'Honkai Star Rail', 'Hoyoverse', '#'],
+  ['Mobile', 'pubg', 'PlayerUnknown\'s Battlegrounds', 'Tencent', 'pesanan-PUBG'],
+  ['Mobile', 'HI', 'Honkai Impact 3rd', 'Hoyoverse', 'pesanan-HI'],
+  ['Mobile', 'genshin', 'Genshin Impact', 'Hoyoverse', 'pesanan-GI'],
+  ['Mobile', 'HSR', 'Honkai Star Rail', 'Hoyoverse', 'pesanan-HSR'],
 ]
 ?>
 <!DOCTYPE html>

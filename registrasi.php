@@ -18,7 +18,7 @@
 
   <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
       <div class="container-fluid">
-        <a class="navbar-brand" href="home.html">Lawak Store</a>
+        <a class="navbar-brand" href="home.php">Lawak Store</a>
         <button
           class="navbar-toggler"
           type="button"

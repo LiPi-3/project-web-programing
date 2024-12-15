@@ -1,26 +1,17 @@
 <?php
 $produk = [
-  ['1', '1.500', '5 Diamonds (5+0 Bonus) | Rp1.500', 'diamond'],
-  ['2', '3.500', '12 Diamonds (11+1 Bonus) | Rp3.500', 'diamond'],
-  ['3', '5.500', '19 Diamonds (17+2 Bonus) | Rp5.500', 'diamond'],
-  ['4', '8.000', '28 Diamonds (25+3 Bonus) | Rp8.000', 'diamond'],
-  ['5', '11.900', '44 Diamonds (40+4 Bonus) | Rp11.900', 'diamond'],
-  ['6', '15.900', '59 Diamonds (53+6 Bonus) | Rp15.900', 'diamond'],
-  ['7', '22.800', '85 Diamonds (77+8 Bonus) | Rp22.800', 'diamond'],
-  ['8', '45.600', '170 Diamonds (154+16 Bonus) | Rp45.600', 'diamond'],
-  ['9', '64.600', '240 Diamonds (217+23 Bonus) | Rp64.600', 'diamond'],
-  ['10', '79.500', '296 Diamonds (256+40 Bonus) | Rp79.500', 'diamond'],
-  ['11', '108.800', '408 Diamonds (367+41 Bonus) | Rp108.800', 'diamond'],
-  ['12', '148.400', '568 Diamonds (503+65 Bonus) | Rp148.400', 'diamond'],
-  ['13', '227.500', '875 Diamonds (774+101 Bonus) | Rp227.500', 'diamond'],
-  ['14', '494.500', '2010 Diamonds (1708+302 Bonus) | Rp494.500', 'diamond'],
-  ['15', '1.186.500', '4830 Diamonds (4003+827 Bonus) | Rp1.186.500', 'diamond'],
-  ['16', '27.700', ' weekly Diamond Pass | Rp27.700', 'weekly'],
-  ['17', '59.300', ' weekly Diamond Pass 2x | Rp59.300', 'weekly'],
-  ['18', '84.200', ' weekly Diamond Pass 3x | Rp84.200', 'weekly'],
-  ['19', '112.300', ' weekly Diamond Pass 4x | Rp112.300', 'weekly'],
-  ['20', '140.300', ' weekly Diamond Pass 5x | Rp140.300', 'weekly'],
-  ['21', '149.000', ' Twilight Pass | Rp149.000', 'twilight'],
+  ['1', '11.500', '60 Genesis Crystal | Rp11.500', 'genesis'],
+  ['2', '58.500', '300+30 Genesis Crystal | Rp58.500', 'genesis'],
+  ['3', '175.900', '980+110 Genesis Crystal | Rp175.900', 'genesis'],
+  ['4', '381.500', '1980+260 Genesis Crystal | Rp381.500', 'genesis'],
+  ['5', '587.000', '3280+600 Genesis Crystal | Rp587.000', 'genesis'],
+  ['6', '1.174.200', '6480+1600 Genesis Crystal | Rp1.174.200', 'genesis'],
+  ['7', '2.388.200', 'All Package Genesis Crystal | Rp2.388.200', 'genesis'],
+  ['8', '57.900', 'Blessing of the Welkin Moon | Rp57.900', 'welkin'],
+  ['9', '116.900', 'Blessing of the Welkin Moon x2 | Rp116.900', 'welkin'],
+  ['10', '175.400', 'Blessing of the Welkin Moon x3 | Rp175.400', 'welkin'],
+  ['11', '233.800', 'Blessing of the Welkin Moon x4| Rp233.800', 'welkin'],
+  ['12', '292.300', 'Blessing of the Welkin Moon x5 | Rp292.300', 'welkin'],
 ]
 ?>
 
@@ -76,17 +67,16 @@ $produk = [
   <main class="container my-4">
     <!-- Banner -->
     <section class="banner bg-dark text-white text-center p-4 rounded">
-      <h1 class="mb-2">Mobile Legends: Bang Bang</h1>
+      <h1 class="mb-2">Genshin Impact</h1>
       <p>Customer Service 24/7</p>
-      <img src="ML-header.jpg" class="img-fluid rounded" alt="MLBB">
+      <img src="GI-header.jpg" class="img-fluid rounded" alt="GI">
     </section>
     <br>
     <section>
       <h2 class="h5">Pilih Nominal Top Up</h2>
       <div class="container-fluid justify-content-around" id="ItemFilter">
-        <button type="button" class="btn btn-outline-primary" id="diamond" onclick="filterProduk(this)">Diamonds</button>
-        <button type="button" class="btn btn-outline-primary" id="weekly" onclick="filterProduk(this)">Weekly Diamond Pass</button>
-        <button type="button" class="btn btn-outline-primary" id="twilight" onclick="filterProduk(this)">Twilight Pass</button>
+        <button type="button" class="btn btn-outline-primary" id="genesis" onclick="filterProduk(this)">Genesis Crystal</button>
+        <button type="button" class="btn btn-outline-primary" id="welkin" onclick="filterProduk(this)">Blessing Welkin</button>
       </div>
     </section>
     <br>
@@ -108,22 +98,28 @@ $produk = [
 
       <!-- Form User ID -->
       <section class="my-4">
-        <div class="row g-3">
-          <h2 class="h5">Masukkan User ID</h2>
-          <div class="col-md-4">
-            <label for="user_id" class="form-label">Masukkan User ID</label>
-            <input type="text" id="user_id" name="user_id" class="form-control" required>
-          </div>
-          <div class="col-md-4">
-          <label for="server_id" class="form-label">Masukkan Server</label>
-            <input type="text" id="server_id" name="server_id" class="form-control" required>
-          </div>
-          <div class="col-md-4">
-            <label for="whatsapp" class="form-label">Nomer Whatsapp</label>
-            <input type="text" onkeypress="return restrictAlphabets(event)" id="whatsapp" name="whatsapp" class="form-control" required>
-          </div>
+    <div class="row g-3">
+      <h2 class="h5">Masukkan Player ID</h2>
+        <div class="col-md-4">
+          <label for="user_id" class="form-label">User ID</label>
+          <input type="text" id="user_id" name="user_id" class="form-control" required>
+        </div>
 
-      </section>
+        <div class="col-md-4">
+          <label for="whatsapp" class="form-label">Nomer Whatsapp</label>
+          <input type="text" onkeypress="return restrictAlphabets(event)" id="whatsapp" name="whatsapp" class="form-control" required>
+        </div>
+        <div class="col-md-4">
+          <label for="server" class="form-label">Silakan Pilih Server</label>
+          <select class="form-select" id="server" aria-label="Default select example">
+          <option value="sea">SEA</option>
+          <option value="global">GLOBAL</option>
+          <option value="cn">CN</option>
+          <option value="kr">KR</option>
+          <option value="jp">JP</option>
+          </select>
+        </div>
+    </section>
 
       <!-- Metode Pembayaran -->
       <section class="my-4">
