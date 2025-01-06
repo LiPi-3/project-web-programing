@@ -1,26 +1,26 @@
 <?php
 $produk = [
-  ['1', '54.600', '1', '1', '475 Points | Rp54.600'],
-  ['2', '109.200', '2', '2', '1000 Points | Rp109.200'],
-  ['3', '163.800', '3', '3', '1475 Points | Rp163.800'],
-  ['4', '218.300', '4', '4', '2050 Points | Rp218.300'],
-  ['5', '272.900', '5', '5', '2525 Points | Rp272.900'],
-  ['6', '327.500', '6', '6', '3050 Points | Rp327.500'],
-  ['7', '379.100', '7', '7', '3650 Points | Rp379.100'],
-  ['8', '433.700', '8', '8', '4125 Points | Rp433.700'],
-  ['9', '488.300', '9', '9', '4650 Points | Rp488.300'],
-  ['10', '544.800', '10', '10', '5350 Points | Rp544.800'],
-  ['11', '597.400', '11', '11', '5700 Points | Rp597.400'],
-  ['12', '599.400', '12', '12', '5825 Points | Rp599.400'],
-  ['13', '653.900', '13', '13', '6350 Points | Rp653.900'],
-  ['14', '758.200', '14', '14', '7300 Points | Rp758.200'],
-  ['15', '763.100', '15', '15', '7400 Points | Rp763.100'],
-  ['16', '923.900', '16', '16', '9000 Points | Rp923.900'],
-  ['17', '1.071.000', '17', '17', '11000 Points | Rp1.071.000'],
-  ['18', '1.125.600', '18', '18', '11475 Points | Rp1.125.600'],
-  ['19', '1.180.100', '19', '19', '12000 Points | Rp1.180.100'],
-  ['20', '1.289.300', '20', '20', '13050 Points | Rp1.289.300'],
-  ['21', '1.450.100', '21', '21', '14650 Points | Rp1.450.100'],
+  ['89', '54.600', '475 Points | Rp54.600', '#', 'VAL'],
+  ['90', '109.200', '1000 Points | Rp109.200', '#', 'VAL'],
+  ['91', '163.800', '1475 Points | Rp163.800', '#', 'VAL'],
+  ['92', '218.300', '2050 Points | Rp218.300', '#', 'VAL'],
+  ['93', '272.900', '2525 Points | Rp272.900', '#', 'VAL'],
+  ['94', '327.500', '3050 Points | Rp327.500', '#', 'VAL'],
+  ['95', '379.100', '3650 Points | Rp379.100', '#', 'VAL'],
+  ['96', '433.700', '4125 Points | Rp433.700', '#', 'VAL'],
+  ['97', '488.300', '4650 Points | Rp488.300', '#', 'VAL'],
+  ['98', '544.800', '5350 Points | Rp544.800', '#', 'VAL'],
+  ['99', '597.400', '5700 Points | Rp597.400', '#', 'VAL'],
+  ['100', '599.400', '5825 Points | Rp599.400', '#', 'VAL'],
+  ['101', '653.900', '6350 Points | Rp653.900', '#', 'VAL'],
+  ['102', '758.200', '7300 Points | Rp758.200', '#', 'VAL'],
+  ['103', '763.100', '7400 Points | Rp763.100', '#', 'VAL'],
+  ['104', '923.900', '9000 Points | Rp923.900', '#', 'VAL'],
+  ['105', '1.071.000', '11000 Points | Rp1.071.000', '#', 'VAL'],
+  ['106', '1.125.600', '11475 Points | Rp1.125.600', '#', 'VAL'],
+  ['107', '1.180.100', '12000 Points | Rp1.180.100', '#', 'VAL'],
+  ['108', '1.289.300', '13050 Points | Rp1.289.300', '#', 'VAL'],
+  ['109', '1.450.100', '14650 Points | Rp1.450.100', '#', 'VAL'],
   ]
 ?>
 
@@ -77,6 +77,7 @@ $produk = [
     <!-- Banner -->
     <section class="banner bg-dark text-white text-center p-4 rounded">
       <h1 class="mb-2">Valorant</h1>
+      <h6 class="sub-title">Riot Games</h6>
       <p>Customer Service 24/7</p>
       <img src="valorant-header.jpg" class="img-fluid rounded" alt="Valorant">
     </section>
@@ -89,8 +90,8 @@ $produk = [
       <div class="row g-3">
       <?php foreach ($produk as $i) { ?>
         <div class="col-md-3">
-        <input type="radio" class="btn-check" name="options" id="option<?= $i[0] ?>" value="<?= $i[1] ?>" autocomplete="off">
-        <label class="btn btn-outline-primary w-100 h-100" name="pilihan<?= $i[2] ?>" for="option<?= $i[3] ?>"><?= $i[4] ?></label>
+        <input type="radio" class="btn-check" name="options" id="option<?= $i[0] ?>" value="<?= $i[0] ?>" autocomplete="off">
+        <label class="btn btn-outline-primary w-100 h-100" for="option<?= $i[0] ?>"><?= $i[2] ?></label>
         </div>
       <?php } ?>
         <!-- Tambahkan item sesuai kebutuhan -->
@@ -127,14 +128,13 @@ $produk = [
       <h2 class="h5">Pilih Metode Pembayaran</h2>
       <div class="row g-3">
       <div class="col-md-4">
-          <select class="form-select" id="server" aria-label="Default select example">
-          <option value="bank">Silakan Pilih</option>
-          <option value="bca">Bank Transfer | BCA</option>
-          <option value="bri">Bank Transfer | BRI</option>
-          <option value="bni">Bank Transfer | BNI</option>
-          <option value="dana">Digital Wallet | DANA</option>
-          <option value="gopay">Digital Wallet | GoPay</option>
-          <option value="qris">QRIS</option>
+          <select class="form-select" name="payment"  id="server" aria-label="Default select example">
+            <option value="bank">Silakan Pilih</option>
+            <option value="BCA">Bank Transfer | BCA</option>
+            <option value="BRI">Bank Transfer | BRI</option>
+            <option value="BNI">Bank Transfer | BNI</option>
+            <option value="DANA">Digital Wallet | DANA</option>
+            <option value="GoPay">Digital Wallet | GoPay</option>
           </select>
         </div>
       </div>
@@ -147,6 +147,8 @@ $produk = [
         </div>
         </div>
     </section>
+    <input type="hidden" name="judul" value="Valorant">
+    <input type="hidden" name="sub-judul" value="Riot Games">
     </form>
   </main>
 

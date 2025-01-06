@@ -1,17 +1,17 @@
 <?php
 $produk = [
-  ['1', '16.500', '65 Crystal | Rp16.500', 'crystal'],
-  ['2', '80.700', '330 Crystal | Rp80.700', 'crystal'],
-  ['3', '161.400', '710 Crystal | Rp161.400', 'crystal'],
-  ['4', '333.700', '1430 Crystal | Rp333.700', 'crystal'],
-  ['5', '811.800', '3860 Crystal | Rp811.800', 'crystal'],
-  ['6', '16.500', '65 B-Chips | Rp16.500', 'chip'],
-  ['7', '80.700', '330 B-Chips | Rp80.700', 'chip'],
-  ['8', '254.000', '990 B-Chips | Rp254.000', 'chip'],
-  ['9', '333.700', '1320 B-Chips | Rp333.700', 'chip'],
-  ['10', '487.100', '1980 B-Chips | Rp487.100', 'chip'],
-  ['11', '811.800', '3300 B-Chips | Rp811.800', 'chip'],
-  ['12', '80.700', 'Monthly Card | Rp80.700', 'member'],
+  ['34', '16.500', '65 Crystal | Rp16.500', 'crystal', 'HI'],
+  ['35', '80.700', '330 Crystal | Rp80.700', 'crystal', 'HI'],
+  ['36', '161.400', '710 Crystal | Rp161.400', 'crystal', 'HI'],
+  ['37', '333.700', '1430 Crystal | Rp333.700', 'crystal', 'HI'],
+  ['38', '811.800', '3860 Crystal | Rp811.800', 'crystal', 'HI'],
+  ['39', '16.500', '65 B-Chips | Rp16.500', 'chip', 'HI'],
+  ['40', '80.700', '330 B-Chips | Rp80.700', 'chip', 'HI'],
+  ['41', '254.000', '990 B-Chips | Rp254.000', 'chip', 'HI'],
+  ['42', '333.700', '1320 B-Chips | Rp333.700', 'chip', 'HI'],
+  ['43', '487.100', '1980 B-Chips | Rp487.100', 'chip', 'HI'],
+  ['44', '811.800', '3300 B-Chips | Rp811.800', 'chip', 'HI'],
+  ['45', '80.700', 'Monthly Card | Rp80.700', 'member', 'HI'],
 ]
 ?>
 
@@ -68,6 +68,7 @@ $produk = [
     <!-- Banner -->
     <section class="banner bg-dark text-white text-center p-4 rounded">
       <h1 class="mb-2">Honkai Impact 3rd</h1>
+      <h6 class="sub-title">Hoyoverse</h6>
       <p>Customer Service 24/7</p>
       <img src="HI-header.jpg" class="img-fluid rounded" alt="HI3">
     </section>
@@ -88,8 +89,8 @@ $produk = [
         <div class="row g-3">
           <?php foreach ($produk as $i) { ?>
             <div class="col-md-3 filter-item <?= $i[3] ?>">
-              <input type="radio" class="btn-check" name="options" id="option<?= $i[0] ?>" value="<?= $i[1] ?>" autocomplete="off">
-              <label class="btn btn-outline-primary w-100 h-100" name="pilihan<?= $i[0] ?>" for="option<?= $i[0] ?>"><?= $i[2] ?></label>
+              <input type="radio" class="btn-check" name="options" id="option<?= $i[0] ?>" value="<?= $i[0] ?>" autocomplete="off">
+              <label class="btn btn-outline-primary w-100 h-100" for="option<?= $i[0] ?>"><?= $i[2] ?></label>
             </div>
           <?php } ?>
           <!-- Tambahkan item sesuai kebutuhan -->
@@ -127,14 +128,13 @@ $produk = [
         <h2 class="h5">Pilih Metode Pembayaran</h2>
         <div class="row g-3">
           <div class="col-md-4">
-            <select class="form-select" id="server" aria-label="Default select example">
+            <select class="form-select" name="payment"  id="server" aria-label="Default select example">
               <option value="bank">Silakan Pilih</option>
-              <option value="bca">Bank Transfer | BCA</option>
-              <option value="bri">Bank Transfer | BRI</option>
-              <option value="bni">Bank Transfer | BNI</option>
-              <option value="dana">Digital Wallet | DANA</option>
-              <option value="gopay">Digital Wallet | GoPay</option>
-              <option value="qris">QRIS</option>
+              <option value="BCA">Bank Transfer | BCA</option>
+              <option value="BRI">Bank Transfer | BRI</option>
+              <option value="BNI">Bank Transfer | BNI</option>
+              <option value="DANA">Digital Wallet | DANA</option>
+              <option value="GoPay">Digital Wallet | GoPay</option>
             </select>
           </div>
         </div>
@@ -147,6 +147,8 @@ $produk = [
           </div>
         </div>
       </section>
+      <input type="hidden" name="judul" value="Honkai Impact 3rd">
+      <input type="hidden" name="sub-judul" value="Hoyoverse">
     </form>
   </main>
 

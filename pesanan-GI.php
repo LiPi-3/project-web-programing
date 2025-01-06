@@ -1,17 +1,17 @@
 <?php
 $produk = [
-  ['1', '11.500', '60 Genesis Crystal | Rp11.500', 'genesis'],
-  ['2', '58.500', '300+30 Genesis Crystal | Rp58.500', 'genesis'],
-  ['3', '175.900', '980+110 Genesis Crystal | Rp175.900', 'genesis'],
-  ['4', '381.500', '1980+260 Genesis Crystal | Rp381.500', 'genesis'],
-  ['5', '587.000', '3280+600 Genesis Crystal | Rp587.000', 'genesis'],
-  ['6', '1.174.200', '6480+1600 Genesis Crystal | Rp1.174.200', 'genesis'],
-  ['7', '2.388.200', 'All Package Genesis Crystal | Rp2.388.200', 'genesis'],
-  ['8', '57.900', 'Blessing of the Welkin Moon | Rp57.900', 'welkin'],
-  ['9', '116.900', 'Blessing of the Welkin Moon x2 | Rp116.900', 'welkin'],
-  ['10', '175.400', 'Blessing of the Welkin Moon x3 | Rp175.400', 'welkin'],
-  ['11', '233.800', 'Blessing of the Welkin Moon x4| Rp233.800', 'welkin'],
-  ['12', '292.300', 'Blessing of the Welkin Moon x5 | Rp292.300', 'welkin'],
+  ['22', '11.500', '60 Genesis Crystal | Rp11.500', 'genesis', 'GI'],
+  ['23', '58.500', '300+30 Genesis Crystal | Rp58.500', 'genesis', 'GI'],
+  ['24', '175.900', '980+110 Genesis Crystal | Rp175.900', 'genesis', 'GI'],
+  ['25', '381.500', '1980+260 Genesis Crystal | Rp381.500', 'genesis', 'GI'],
+  ['26', '587.000', '3280+600 Genesis Crystal | Rp587.000', 'genesis', 'GI'],
+  ['27', '1.174.200', '6480+1600 Genesis Crystal | Rp1.174.200', 'genesis', 'GI'],
+  ['28', '2.388.200', 'All Package Genesis Crystal | Rp2.388.200', 'genesis', 'GI'],
+  ['29', '57.900', 'Blessing of the Welkin Moon | Rp57.900', 'welkin', 'GI'],
+  ['30', '116.900', 'Blessing of the Welkin Moon x2 | Rp116.900', 'welkin', 'GI'],
+  ['31', '175.400', 'Blessing of the Welkin Moon x3 | Rp175.400', 'welkin', 'GI'],
+  ['32', '233.800', 'Blessing of the Welkin Moon x4| Rp233.800', 'welkin', 'GI'],
+  ['33', '292.300', 'Blessing of the Welkin Moon x5 | Rp292.300', 'welkin', 'GI'],
 ]
 ?>
 
@@ -68,6 +68,7 @@ $produk = [
     <!-- Banner -->
     <section class="banner bg-dark text-white text-center p-4 rounded">
       <h1 class="mb-2">Genshin Impact</h1>
+      <h6 class="sub-title">Hoyoverse</h6>
       <p>Customer Service 24/7</p>
       <img src="GI-header.jpg" class="img-fluid rounded" alt="GI">
     </section>
@@ -87,8 +88,8 @@ $produk = [
         <div class="row g-3">
           <?php foreach ($produk as $i) { ?>
             <div class="col-md-3 filter-item <?= $i[3] ?>">
-              <input type="radio" class="btn-check" name="options" id="option<?= $i[0] ?>" value="<?= $i[1] ?>" autocomplete="off">
-              <label class="btn btn-outline-primary w-100 h-100" name="pilihan<?= $i[0] ?>" for="option<?= $i[0] ?>"><?= $i[2] ?></label>
+              <input type="radio" class="btn-check" name="options" id="option<?= $i[0] ?>" value="<?= $i[0] ?>" autocomplete="off">
+              <label class="btn btn-outline-primary w-100 h-100" for="option<?= $i[0] ?>"><?= $i[2] ?></label>
             </div>
           <?php } ?>
           <!-- Tambahkan item sesuai kebutuhan -->
@@ -111,12 +112,13 @@ $produk = [
         </div>
         <div class="col-md-4">
           <label for="server" class="form-label">Silakan Pilih Server</label>
-          <select class="form-select" id="server" aria-label="Default select example">
-          <option value="sea">SEA</option>
-          <option value="global">GLOBAL</option>
-          <option value="cn">CN</option>
-          <option value="kr">KR</option>
-          <option value="jp">JP</option>
+          <select class="form-control" name="server" id="server" aria-label="Default select example">
+          <option value="pilih-server">Silakan Pilih</option>
+          <option value="SEA">SEA</option>
+          <option value="GLOBAL">GLOBAL</option>
+          <option value="CN">CN</option>
+          <option value="KR">KR</option>
+          <option value="JP">JP</option>
           </select>
         </div>
     </section>
@@ -126,14 +128,13 @@ $produk = [
         <h2 class="h5">Pilih Metode Pembayaran</h2>
         <div class="row g-3">
           <div class="col-md-4">
-            <select class="form-select" id="server" aria-label="Default select example">
+          <select class="form-control" name="payment" id="payment" aria-label="Default select example">
               <option value="bank">Silakan Pilih</option>
-              <option value="bca">Bank Transfer | BCA</option>
-              <option value="bri">Bank Transfer | BRI</option>
-              <option value="bni">Bank Transfer | BNI</option>
-              <option value="dana">Digital Wallet | DANA</option>
-              <option value="gopay">Digital Wallet | GoPay</option>
-              <option value="qris">QRIS</option>
+              <option value="BCA">Bank Transfer | BCA</option>
+              <option value="BRI">Bank Transfer | BRI</option>
+              <option value="BNI">Bank Transfer | BNI</option>
+              <option value="DANA">Digital Wallet | DANA</option>
+              <option value="GoPay">Digital Wallet | GoPay</option>
             </select>
           </div>
         </div>
@@ -146,6 +147,8 @@ $produk = [
           </div>
         </div>
       </section>
+      <input type="hidden" name="judul" value="Genshin Impact">
+      <input type="hidden" name="sub-judul" value="Hoyoverse">
     </form>
   </main>
 

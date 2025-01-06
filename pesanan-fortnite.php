@@ -1,8 +1,8 @@
 <?php
 $produk = [
-  ['1', '396.652', '1', '1', '2800 V-Bucks | Rp396.652'],
-  ['2', '543.038', '2', '2', '5000 V-Bucks | Rp543.038'],
-  ['3', '1.299.878', '3', '3', '13500 V-Bucks | Rp1.299.878'],
+  ['19', '396.652', '2800 V-Bucks | Rp396.652', '#', 'FOT'],
+  ['20', '543.038', '5000 V-Bucks | Rp543.038', '#', 'FOT'],
+  ['21', '1.299.878', '13500 V-Bucks | Rp1.299.878', '#', 'FOT'],
 
   ]
 ?>
@@ -60,6 +60,7 @@ $produk = [
     <!-- Banner -->
     <section class="banner bg-dark text-white text-center p-4 rounded">
       <h1 class="mb-2">Fortnite</h1>
+      <h6 class="sub-title">Epic Games</h6>
       <p>Customer Service 24/7</p>
       <img src="fortnite-header.jpg" class="img-fluid rounded" alt="Fortnite">
     </section>
@@ -72,8 +73,8 @@ $produk = [
       <div class="row g-3">
       <?php foreach ($produk as $i) { ?>
         <div class="col-md-4">
-        <input type="radio" class="btn-check" name="options" id="option<?= $i[0] ?>" value="<?= $i[1] ?>" autocomplete="off">
-        <label class="btn btn-outline-primary w-100 h-100" name="pilihan<?= $i[2] ?>" for="option<?= $i[3] ?>"><?= $i[4] ?></label>
+        <input type="radio" class="btn-check" name="options" id="option<?= $i[0] ?>" value="<?= $i[0] ?>" autocomplete="off">
+        <label class="btn btn-outline-primary w-100 h-100" for="option<?= $i[0] ?>"><?= $i[2] ?></label>
         </div>
       <?php } ?>
         <!-- Tambahkan item sesuai kebutuhan -->
@@ -101,14 +102,13 @@ $produk = [
       <h2 class="h5">Pilih Metode Pembayaran</h2>
       <div class="row g-3">
       <div class="col-md-4">
-          <select class="form-select" id="server" aria-label="Default select example">
-          <option value="bank">Silakan Pilih</option>
-          <option value="bca">Bank Transfer | BCA</option>
-          <option value="bri">Bank Transfer | BRI</option>
-          <option value="bni">Bank Transfer | BNI</option>
-          <option value="dana">Digital Wallet | DANA</option>
-          <option value="gopay">Digital Wallet | GoPay</option>
-          <option value="qris">QRIS</option>
+          <select class="form-select" name="payment"  id="server" aria-label="Default select example">
+            <option value="bank">Silakan Pilih</option>
+            <option value="BCA">Bank Transfer | BCA</option>
+            <option value="BRI">Bank Transfer | BRI</option>
+            <option value="BNI">Bank Transfer | BNI</option>
+            <option value="DANA">Digital Wallet | DANA</option>
+            <option value="GoPay">Digital Wallet | GoPay</option>
           </select>
         </div>
       </div>
@@ -121,6 +121,8 @@ $produk = [
         </div>
         </div>
     </section>
+    <input type="hidden" name="judul" value="Fortnite">
+    <input type="hidden" name="sub-judul" value="Epic Games">
     </form>
   </main>
 

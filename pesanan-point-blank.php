@@ -1,12 +1,12 @@
 <?php
 $produk = [
-  ['1', '9.450', '1', '1', '1200 PB CASH | Rp9.450'],
-  ['2', '18.900', '2', '2', '2400 PB CASH | Rp18.900'],
-  ['3', '47.250', '3', '3', '6000 PB CASH | Rp47.250'],
-  ['4', '94.500', '4', '4', '12000 PB CASH | Rp94.500'],
-  ['5', '189.000', '5', '5', '24000 PB CASH | Rp189.000'],
-  ['6', '283.500', '6', '6', '36000 PB CASH | Rp283.500'],
-  ['7', '472.500', '7', '7', '60000 PB CASH | Rp472.500'],
+  ['73', '9.450', '1200 PB CASH | Rp9.450', '#', 'PB'],
+  ['74', '18.900', '2400 PB CASH | Rp18.900', '#', 'PB'],
+  ['75', '47.250', '6000 PB CASH | Rp47.250', '#', 'PB'],
+  ['76', '94.500', '12000 PB CASH | Rp94.500', '#', 'PB'],
+  ['77', '189.000', '24000 PB CASH | Rp189.000', '#', 'PB'],
+  ['78', '283.500', '36000 PB CASH | Rp283.500', '#', 'PB'],
+  ['79', '472.500', '60000 PB CASH | Rp472.500', '#', 'PB'],
 
   ]
 ?>
@@ -64,6 +64,7 @@ $produk = [
     <!-- Banner -->
     <section class="banner bg-dark text-white text-center p-4 rounded">
       <h1 class="mb-2">Point Blank</h1>
+      <h6 class="sub-title">Zepetto</h6>
       <p>Customer Service 24/7</p>
       <img src="PB-header.jpg" class="img-fluid rounded" alt="Point Blank">
     </section>
@@ -76,8 +77,8 @@ $produk = [
       <div class="row g-3">
       <?php foreach ($produk as $i) { ?>
         <div class="col-md-3">
-        <input type="radio" class="btn-check" name="options" id="option<?= $i[0] ?>" value="<?= $i[1] ?>" autocomplete="off">
-        <label class="btn btn-outline-primary w-100 h-100" name="pilihan<?= $i[2] ?>" for="option<?= $i[3] ?>"><?= $i[4] ?></label>
+        <input type="radio" class="btn-check" name="options" id="option<?= $i[0] ?>" value="<?= $i[0] ?>" autocomplete="off">
+        <label class="btn btn-outline-primary w-100 h-100" for="option<?= $i[0] ?>"><?= $i[2] ?></label>
         </div>
       <?php } ?>
         <!-- Tambahkan item sesuai kebutuhan -->
@@ -105,14 +106,13 @@ $produk = [
       <h2 class="h5">Pilih Metode Pembayaran</h2>
       <div class="row g-3">
       <div class="col-md-4">
-          <select class="form-select" id="server" aria-label="Default select example">
-          <option value="bank">Silakan Pilih</option>
-          <option value="bca">Bank Transfer | BCA</option>
-          <option value="bri">Bank Transfer | BRI</option>
-          <option value="bni">Bank Transfer | BNI</option>
-          <option value="dana">Digital Wallet | DANA</option>
-          <option value="gopay">Digital Wallet | GoPay</option>
-          <option value="qris">QRIS</option>
+          <select class="form-select" name="payment"  id="server" aria-label="Default select example">
+           <option value="bank">Silakan Pilih</option>
+            <option value="BCA">Bank Transfer | BCA</option>
+            <option value="BRI">Bank Transfer | BRI</option>
+            <option value="BNI">Bank Transfer | BNI</option>
+            <option value="DANA">Digital Wallet | DANA</option>
+            <option value="GoPay">Digital Wallet | GoPay</option>
           </select>
         </div>
       </div>
@@ -125,6 +125,8 @@ $produk = [
         </div>
         </div>
     </section>
+    <input type="hidden" name="judul" value="Point Blank">
+    <input type="hidden" name="sub-judul" value="Zepetto">
     </form>
   </main>
 

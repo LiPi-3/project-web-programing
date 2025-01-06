@@ -1,11 +1,11 @@
 <?php
 $produk = [
-  ['1', '12.700', '1', '1', '100 Bonds | Rp12.700'],
-  ['2', '63.700', '2', '2', '500 Bonds | Rp63.700'],
-  ['3', '127.400', '3', '3', '1000 Bonds | Rp127.400'],
-  ['4', '318.400', '4', '4', '2500 Bonds | Rp318.400'],
-  ['5', '636.900', '5', '5', '5000 Bonds | Rp636.900'],
-  ['6', '1.274.100', '6', '6', '1000 Bonds | Rp1.274.100'],
+  ['13', '12.700', '100 Bonds | Rp12.700', '#', 'ABI'],
+  ['14', '63.700', '500 Bonds | Rp63.700', '#', 'ABI'],
+  ['15', '127.400', '1000 Bonds | Rp127.400', '#', 'ABI'],
+  ['16', '318.400', '2500 Bonds | Rp318.400', '#', 'ABI'],
+  ['17', '636.900', '5000 Bonds | Rp636.900', '#', 'ABI'],
+  ['18', '1.274.100', '1000 Bonds | Rp1.274.100', '#', 'ABI'],
 
   ]
 ?>
@@ -63,6 +63,7 @@ $produk = [
     <!-- Banner -->
     <section class="banner bg-dark text-white text-center p-4 rounded">
       <h1 class="mb-2">Arena Breakout: Infinite</h1>
+      <h6 class="sub-title">TIMI Games</h6>
       <p>Customer Service 24/7</p>
       <img src="ABI-header.jpg" class="img-fluid rounded" alt="Arena Breakout: Infinite">
     </section>
@@ -75,8 +76,8 @@ $produk = [
       <div class="row g-3">
       <?php foreach ($produk as $i) { ?>
         <div class="col-md-3">
-        <input type="radio" class="btn-check" name="options" id="option<?= $i[0] ?>" value="<?= $i[1] ?>" autocomplete="off">
-        <label class="btn btn-outline-primary w-100 h-100" name="pilihan<?= $i[2] ?>" for="option<?= $i[3] ?>"><?= $i[4] ?></label>
+        <input type="radio" class="btn-check" name="options" id="option<?= $i[0] ?>" value="<?= $i[0] ?>" autocomplete="off">
+        <label class="btn btn-outline-primary w-100 h-100" for="option<?= $i[0] ?>"><?= $i[2] ?></label>
         </div>
       <?php } ?>
         <!-- Tambahkan item sesuai kebutuhan -->
@@ -104,26 +105,26 @@ $produk = [
       <h2 class="h5">Pilih Metode Pembayaran</h2>
       <div class="row g-3">
       <div class="col-md-4">
-          <select class="form-select" id="server" aria-label="Default select example">
-          <option value="bank">Silakan Pilih</option>
-          <option value="bca">Bank Transfer | BCA</option>
-          <option value="bri">Bank Transfer | BRI</option>
-          <option value="bni">Bank Transfer | BNI</option>
-          <option value="dana">Digital Wallet | DANA</option>
-          <option value="gopay">Digital Wallet | GoPay</option>
-          <option value="qris">QRIS</option>
-          </select>
+          <select class="form-select" name="payment"  id="server" aria-label="Default select example">
+            <option value="bank">Silakan Pilih</option>
+            <option value="BCA">Bank Transfer | BCA</option>
+            <option value="BRI">Bank Transfer | BRI</option>
+            <option value="BNI">Bank Transfer | BNI</option>
+            <option value="DANA">Digital Wallet | DANA</option>
+            <option value="GoPay">Digital Wallet | GoPay</option>
         </div>
       </div>
     </section>
     <section class="my-4">
         <h2 class="h5"></h2>
         <div class="row g-3">
-        <div class="col-md-4">
-        <button type="submit" class="btn btn-success">Konfirmasi Pesanan</button>
-        </div>
+          <div class="col-md-4">
+            <button type="submit" class="btn btn-success">Konfirmasi Pesanan</button>
+          </div>
         </div>
     </section>
+    <input type="hidden" name="judul" value="Arena Breakout: Infinite">
+    <input type="hidden" name="sub-judul" value="TIMI Games">
     </form>
   </main>
 

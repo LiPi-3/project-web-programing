@@ -1,11 +1,11 @@
 <?php
 $produk = [
-  ['1', '59.500', '1', '1', '575 RP | Rp59.500'],
-  ['2', '138.800', '2', '2', '1380 RP | Rp138.800'],
-  ['3', '277.500', '3', '3', '2800 RP | Rp277.500'],
-  ['4', '436.100', '4', '4', '4500 RP | Rp436.100'],
-  ['5', '614.400', '5', '5', '6500 RP | Rp614.400'],
-  ['6', '1.189.200', '6', '6', '13500 RP | Rp1.189.200'],
+  ['46', '59.500', '575 RP | Rp59.500', '#', 'LOL'],
+  ['47', '138.800', '1380 RP | Rp138.800', '#', 'LOL'],
+  ['48', '277.500', '2800 RP | Rp277.500', '#', 'LOL'],
+  ['49', '436.100', '4500 RP | Rp436.100', '#', 'LOL'],
+  ['50', '614.400', '6500 RP | Rp614.400', '#', 'LOL'],
+  ['51', '1.189.200', '13500 RP | Rp1.189.200', '#', 'LOL'],
 
   ]
 ?>
@@ -63,6 +63,7 @@ $produk = [
     <!-- Banner -->
     <section class="banner bg-dark text-white text-center p-4 rounded">
       <h1 class="mb-2">League of Legends</h1>
+      <h6 class="sub-title">Riot Games</h6>
       <p>Customer Service 24/7</p>
       <img src="LOL-header.jpg" class="img-fluid rounded" alt="League of Legends">
     </section>
@@ -75,8 +76,8 @@ $produk = [
       <div class="row g-3">
       <?php foreach ($produk as $i) { ?>
         <div class="col-md-3">
-        <input type="radio" class="btn-check" name="options" id="option<?= $i[0] ?>" value="<?= $i[1] ?>" autocomplete="off">
-        <label class="btn btn-outline-primary w-100 h-100" name="pilihan<?= $i[2] ?>" for="option<?= $i[3] ?>"><?= $i[4] ?></label>
+        <input type="radio" class="btn-check" name="options" id="option<?= $i[0] ?>" value="<?= $i[0] ?>" autocomplete="off">
+        <label class="btn btn-outline-primary w-100 h-100" for="option<?= $i[0] ?>"><?= $i[2] ?></label>
         </div>
       <?php } ?>
         <!-- Tambahkan item sesuai kebutuhan -->
@@ -104,14 +105,13 @@ $produk = [
       <h2 class="h5">Pilih Metode Pembayaran</h2>
       <div class="row g-3">
       <div class="col-md-4">
-          <select class="form-select" id="server" aria-label="Default select example">
-          <option value="bank">Silakan Pilih</option>
-          <option value="bca">Bank Transfer | BCA</option>
-          <option value="bri">Bank Transfer | BRI</option>
-          <option value="bni">Bank Transfer | BNI</option>
-          <option value="dana">Digital Wallet | DANA</option>
-          <option value="gopay">Digital Wallet | GoPay</option>
-          <option value="qris">QRIS</option>
+          <select class="form-select" name="payment"  id="server" aria-label="Default select example">
+            <option value="bank">Silakan Pilih</option>
+            <option value="BCA">Bank Transfer | BCA</option>
+            <option value="BRI">Bank Transfer | BRI</option>
+            <option value="BNI">Bank Transfer | BNI</option>
+            <option value="DANA">Digital Wallet | DANA</option>
+            <option value="GoPay">Digital Wallet | GoPay</option>
           </select>
         </div>
       </div>
@@ -124,6 +124,8 @@ $produk = [
         </div>
         </div>
     </section>
+    <input type="hidden" name="judul" value="League of Legends">
+    <input type="hidden" name="sub-judul" value="Riot Games">
     </form>
   </main>
 

@@ -1,14 +1,14 @@
 <?php
 $produk = [
-  ['1', '6.500', '30 UC | Rp6.500', 'UC'],
-  ['2', '12.900', '60 UC | Rp12.900', 'UC'],
-  ['3', '64.300', '300+25 UC | Rp64.300', 'UC'],
-  ['4', '128.500', '600+60 UC | Rp128.500', 'UC'],
-  ['5', '321.300', '1500+300 UC | Rp321.300', 'UC'],
-  ['6', '642.500', '3000+850 UC | Rp642.500', 'UC'],
-  ['7', '1.288.900', '6000+2100 UC | Rp1.288.900', 'UC'],
-  ['8', '144.000', 'Upgraded RP | Rp144.000', 'royale'],
-  ['9', '367.600', 'Upgraded Elite RP | Rp367.600', 'royale'],
+  ['80', '6.500', '30 UC | Rp6.500', 'UC', 'PUBG'],
+  ['81', '12.900', '60 UC | Rp12.900', 'UC', 'PUBG'],
+  ['82', '64.300', '300+25 UC | Rp64.300', 'UC', 'PUBG'],
+  ['83', '128.500', '600+60 UC | Rp128.500', 'UC', 'PUBG'],
+  ['84', '321.300', '1500+300 UC | Rp321.300', 'UC', 'PUBG'],
+  ['85', '642.500', '3000+850 UC | Rp642.500', 'UC', 'PUBG'],
+  ['86', '1.288.900', '6000+2100 UC | Rp1.288.900', 'UC', 'PUBG'],
+  ['87', '144.000', 'Upgraded RP | Rp144.000', 'royale', 'PUBG'],
+  ['88', '367.600', 'Upgraded Elite RP | Rp367.600', 'royale', 'PUBG'],
 ]
 ?>
 
@@ -65,6 +65,7 @@ $produk = [
     <!-- Banner -->
     <section class="banner bg-dark text-white text-center p-4 rounded">
       <h1 class="mb-2">PUBG Mobile Indonesia</h1>
+      <h6 class="sub-title">Tencent</h6>
       <p>Customer Service 24/7</p>
       <img src="PUBG-header.jpg" class="img-fluid rounded" alt="PUBG ID">
     </section>
@@ -84,8 +85,8 @@ $produk = [
         <div class="row g-3">
           <?php foreach ($produk as $i) { ?>
             <div class="col-md-3 filter-item <?= $i[3] ?>">
-              <input type="radio" class="btn-check" name="options" id="option<?= $i[0] ?>" value="<?= $i[1] ?>" autocomplete="off">
-              <label class="btn btn-outline-primary w-100 h-100" name="pilihan<?= $i[0] ?>" for="option<?= $i[0] ?>"><?= $i[2] ?></label>
+              <input type="radio" class="btn-check" name="options" id="option<?= $i[0] ?>" value="<?= $i[0] ?>" autocomplete="off">
+              <label class="btn btn-outline-primary w-100 h-100" for="option<?= $i[0] ?>"><?= $i[2] ?></label>
             </div>
           <?php } ?>
           <!-- Tambahkan item sesuai kebutuhan -->
@@ -114,14 +115,13 @@ $produk = [
         <h2 class="h5">Pilih Metode Pembayaran</h2>
         <div class="row g-3">
           <div class="col-md-4">
-            <select class="form-select" id="server" aria-label="Default select example">
+            <select class="form-select" name="payment"  id="server" aria-label="Default select example">
               <option value="bank">Silakan Pilih</option>
-              <option value="bca">Bank Transfer | BCA</option>
-              <option value="bri">Bank Transfer | BRI</option>
-              <option value="bni">Bank Transfer | BNI</option>
-              <option value="dana">Digital Wallet | DANA</option>
-              <option value="gopay">Digital Wallet | GoPay</option>
-              <option value="qris">QRIS</option>
+              <option value="BCA">Bank Transfer | BCA</option>
+              <option value="BRI">Bank Transfer | BRI</option>
+              <option value="BNI">Bank Transfer | BNI</option>
+              <option value="DANA">Digital Wallet | DANA</option>
+              <option value="GoPay">Digital Wallet | GoPay</option>
             </select>
           </div>
         </div>
@@ -134,6 +134,8 @@ $produk = [
           </div>
         </div>
       </section>
+      <input type="hidden" name="judul" value="PUBG Mobile Indonesia">
+      <input type="hidden" name="sub-judul" value="Tencent">
     </form>
   </main>
 
