@@ -52,6 +52,16 @@ $games = [
             </div>
           </div>
         </div>
+        <div class="dropdown">
+          <a class="nav-link dropdown-toggle text-white" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+            <img src="./ABI-header.jpg" alt="Profile Picture" class="rounded-circle" style="width: 30px; height: 30px;">
+            User
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+            <li><a class="dropdown-item" href="#">Profile</a></li>
+            <li><a class="dropdown-item" href="#">Logout</a></li>
+          </ul>
+        </div>
     </nav>
 
     <!-- filter menu-->
@@ -91,9 +101,9 @@ $games = [
   </main>
 
   <footer class="bg-primary text-center text-lg-start">
-        <div class="text-center p-3 text-light">
-        © 2024 Copyright Lawak Store
-        </div>
+    <div class="text-center p-3 text-light">
+      © 2024 Copyright Lawak Store
+    </div>
   </footer>
 
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
